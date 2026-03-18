@@ -4,145 +4,220 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
+    <meta property="og:title" content="재키위키" />
+    <meta property="og:description" content="어제보다 오늘이 더 나은 사람" />
 
-    <title>Today I Learn</title>
+    <title>재키위키</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
+    <div class="stars-layer" aria-hidden="true">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
+
+
+
     <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
-      <ul class="nav-links">
-        <li><a href="#about">자기소개</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="top-nav">
+        <a href="#" class="nav-logo">재키위키</a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">자기소개</a></li>
+          <li><a href="#info">기본 정보</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#works">인생 작품</a></li>
+          <li><a href="#til">TIL</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
 
     <!-- 프로필 히어로 -->
     <section class="hero" id="about">
-      <div class="profile-card">
-        <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+      <div class="profile-avatar fade-in">
+        <div class="avatar-ring">
+          <img src="./images/profile.jpg" alt="프로필 사진" />
         </div>
-        <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
+        <div class="avatar-badge">
+          <h1>재키</h1>
         </div>
       </div>
     </section>
 
     <main>
       <!-- 자기소개 -->
-      <section class="content-section">
-        <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
+      <section class="content-section fade-in">
+        <h2>😉 자기소개</h2>
+        <p>
+          이 넓은 우주에서 지구에 태어나 이렇게 만났다는 게 참 신기한 인연이거든요. <br>
+          아무튼 지구에서의 삶은 최대한 유쾌하고 의미있게 살아보려 합니다. <br>
+          재미있는 일이나 신기한 게 있으면 13층 재키를 불러주십쇼.
+        </p>
+        <p>
+          더 궁금한 점이 있다면 천천히 알아가봐요~
+        </p>
       </section>
 
       <!-- 기본 정보 -->
-      <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <!-- TODO: 자신의 기본 정보를 표(<table>)로 정리하세요 -->
+      <section class="content-section fade-in" id="info">
+        <h2>📋 기본 정보</h2>
         <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td></td>
-          </tr>
+          <tbody>
+            <tr>
+              <th scope="row">이름</th>
+              <td>최재영</td>
+            </tr>
+            <tr>
+              <th scope="row">MBTI</th>
+              <td>ENFJ</td>
+            </tr>
+            <tr>
+              <th scope="row">취미</th>
+              <td>헬스, 독서, 추리, 피아노</td>
+            </tr>
+            <tr>
+              <th scope="row">좋아하는 음식</th>
+              <td>고기, 과일</td>
+            </tr>
+            <tr>
+              <th scope="row">싫어하는 음식</th>
+              <td>마요네즈, 머스타드, 식초, 치즈(모짜렐라 빼고)가 들어간 음식</td>
+            </tr>
+            <tr>
+              <th scope="row">관심 주제</th>
+              <td>향수, 클래식, 우주의 비밀</td>
+            </tr>
+          </tbody>
         </table>
       </section>
 
-      <!-- 나만의 갤러리 -->
-      <section class="content-section" id="gallery">
-        <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
+      <!-- 나의 갤러리 -->
+      <section class="content-section fade-in" id="gallery">
+        <h2>🖼️ 나의 갤러리</h2>
+        <p class="section-desc">폰 갤러리에서 갖고온 사진들 (누르면 확대됨)</p>
         <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+          <div class="gallery-item">
+            <img src="./images/piano_concert.jpg" alt="피아노 연주회" loading="lazy" />
+            <div class="gallery-caption">피아노 연주회</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/fine_art.jpg" alt="미술관" loading="lazy" />
+            <div class="gallery-caption">미술관에서</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/perfume.jpg" alt="향수" loading="lazy" />
+            <div class="gallery-caption">향수앓이 불치병</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/book.jpg" alt="서점" loading="lazy" />
+            <div class="gallery-caption">마음이 편안해지는 서점</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/workout.jpg" alt="헬스장" loading="lazy" />
+            <div class="gallery-caption">5년째 다니는 집 앞 헬스장</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/piano.jpg" alt="피아노 연주" loading="lazy" />
+            <div class="gallery-caption">피아노 연주</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/adventure.jpg" alt="탐험" loading="lazy" />
+            <div class="gallery-caption">탐험을 즐기는 편</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/running.jpg" alt="10km 러닝" loading="lazy" />
+            <div class="gallery-caption">유산소도 합니다</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/japanese_cat.jpg" alt="일본에서 만난 고양이" loading="lazy" />
+            <div class="gallery-caption">여행 중 만난 고양이</div>
+          </div>
         </div>
       </section>
 
+      <!-- 갤러리 모달 -->
+      <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+        <button class="modal-close" id="modal-close" aria-label="닫기">✕</button>
+        <img src="" alt="확대 이미지" id="modal-img" />
+      </div>
+
       <!-- 나를 울린 인생 작품 -->
-      <section class="content-section" id="works">
-        <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
-            <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
-            </div>
-            <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
-            </div>
-          </article>
-        </div>
+      <section class="content-section fade-in" id="works">
+        <h2>🎬 <s>나를 울린</s> 인생 작품</h2>
+        <ol class="works-list">
+          <li>
+            <article class="work-card">
+              <div class="work-thumbnail">
+                <img src="./images/limitless.jpg" alt="인생 작품 1 포스터" />
+              </div>
+              <div class="work-info">
+                <h3>리미트리스 (2011)</h3>
+                <p>인간의 뇌는 10%만 사용된다는 어디 근거도 없는 낭설에서 영감을 받아, 뇌의 기능을 100% 사용할 수 있게 해주는 NZT 약으로 인생이 변한다는 내용인데요. 인상적인 부분은 NZT를 섭취할 때 뉴런 하나하나가 깨어나는 모습이 시각화되는데, 이 장면에서 저도 뇌가 간질간질하면서 NZT 복용자가 된 느낌을 받았습니다. 근데 뭐, 인생은 결국 내 마음가짐에 달려있으니까, 항상 활기차고 당당하게, 유쾌하고 긍정적으로 살면 NZT고 나발이고 필요 없다는 것을 깨달을 수 있습니다.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="work-card video-card">
+              <div class="work-info">
+                <h3>Bruce Liu - Chopin: Nocturne in C Sharp Minor, KK IVa/16</h3>
+                <p>쇼팽 녹턴 Op.9 No.2가 널리 알려져있지만, No.20 녹턴 역시 매우 아름답습니다. 하지만 Piano Concerto No.2와 유사한 선율을 느끼시게 될지도 모르는데, 그건 쇼팽이 자신의 누나인 루드비카에게 협주곡 2번 연주를 위한 연습곡 개념으로 작곡했기 때문이라는 설이 가장 유력합니다. 아무튼 일단 들어봐, 츄라이츄라이~</p>
+                <iframe
+                  src="https://www.youtube.com/embed/s_ST3hzMsVE?start=18"
+                  title="Chopin: Nocturne in C Sharp Minor, KK IVa/16"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+          </li>
+        </ol>
       </section>
 
       <!-- TIL (Today I Learned) -->
-      <section class="content-section" id="til">
-        <h2>TIL</h2>
-        <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
+      <section class="content-section fade-in" id="til">
+        <h2>📚 TIL — Today I Learned</h2>
 
         <!-- TIL 작성 폼 -->
         <form class="til-form" id="til-form">
           <div class="form-group">
-            <label for="til-date">날짜</label>
+            <label for="til-date">📅 날짜</label>
             <input type="date" id="til-date" name="date" required />
           </div>
           <div class="form-group">
-            <label for="til-title">제목</label>
+            <label for="til-title">📌 제목</label>
             <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
           </div>
           <div class="form-group">
-            <label for="til-content">내용</label>
+            <label for="til-content">✍️ 내용</label>
             <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
           </div>
           <div class="form-actions">
-            <button type="submit">등록</button>
-            <button type="reset">초기화</button>
+            <button type="reset" class="btn-reset">초기화</button>
+            <button type="submit" class="btn-submit">등록 ✨</button>
           </div>
         </form>
 
-        <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
+        <!-- TIL 목록 -->
         <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
           <article class="til-item">
-            <time>2026-03-15</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            <time datetime="2026-03-19">2026-03-19</time>
+            <h3>오늘의 신기한 사실 1가지</h3>
+            <p>우리가 보는 달의 모습은 사실 1.26초 전의 달이다. <br> 왜냐하면 달빛이 지구에 도달하는데 걸리는 시간이 대략 1.26초 정도이기 때문이다.</p>
+            <button class="til-delete" aria-label="TIL 삭제">삭제</button>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer>
-      <p>&copy; My Page</p>
+      <p>zzaekkii &copy; 2026</p>
+      <p>어제보다 오늘이 더 나은 사람</p>
     </footer>
   </body>
 </html>
