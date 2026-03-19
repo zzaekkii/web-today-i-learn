@@ -313,9 +313,6 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===================================
-   프로필 히어로 섹션 — 아바타 스타일
-   =================================== */
 .hero {
   display: flex;
   justify-content: center;
@@ -663,14 +660,20 @@ main {
   font-size: 0.95rem;
 }
 
+.work-card .iframe-container {
+  width: 100%;
+  margin-top: 16px;
+}
+
 .work-card iframe,
 .work-card video {
   width: 100%;
-  max-width: 560px;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
   border: none;
   border-radius: 10px;
-  margin-top: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 
